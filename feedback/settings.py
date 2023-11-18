@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'uijjj6u2pr6z@lo2@0of6liz)wtfs*#dd^$gbq!au^b)7e$r%)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -119,8 +119,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR / "uploads"
 
 MEDIA_URL = "/user-media/"
+
+# Session settings
+
+# SESSION_COOKIE_AGE = 120  # 2 minutes
